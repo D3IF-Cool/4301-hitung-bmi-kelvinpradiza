@@ -13,8 +13,7 @@ import org.d3if4054.hitungbmi.databinding.FragmentHitungBinding
 class HitungFragment : Fragment() {
     private lateinit var binding: FragmentHitungBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = FragmentHitungBinding.inflate(
-                layoutInflater, container, false)
+        binding = FragmentHitungBinding.inflate(layoutInflater, container, false)
         binding.button.setOnClickListener{ hitungBmi() }
         return binding.root
     }
