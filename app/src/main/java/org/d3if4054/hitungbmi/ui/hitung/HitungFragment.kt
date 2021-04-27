@@ -32,17 +32,6 @@ class HitungFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        viewModel.getNavigasi().observe(viewLifecycleOwner, {
-            if (it == null) return@observe
-            findNavController().navigate(HitungFragmentDirections.actionHitungFragmentToSaranFragment(it))
-            viewModel.selesaiNavigasi()
-        })
-
-        viewModel.data.observe(viewLifecycleOwner, {
-            if (it == null ) return@observe
-            Log.d("HitungFragment", "Data tersimpan. ID = ${it.id}")
-        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
