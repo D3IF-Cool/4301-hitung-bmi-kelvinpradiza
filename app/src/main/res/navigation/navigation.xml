@@ -10,11 +10,15 @@
         android:name="org.d3if4054.hitungbmi.ui.hitung.HitungFragment"
         android:label="HitungFragment"
         tools:layout="@layout/fragment_hitung">
-    <action android:id="@+id/action_hitungFragment_to_saranFragment"
+        <action android:id="@+id/action_hitungFragment_to_saranFragment"
         app:destination="@id/saranFragment" />
         <action
             android:id="@+id/action_hitungFragment_to_aboutFragment"
         app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_hitungFragment_to_historiFragment"
+            app:destination="@id/historiFragment" />
+
         <argument
             android:name="aboutFragment"
             app:argType="org.d3if4054.hitungbmi.data.KategoriBmi" />
@@ -34,6 +38,11 @@
         android:name="org.d3if4054.hitungbmi.ui.AboutFragment"
         android:label="@string/tentang_aplikasi"
         tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/historiFragment"
+        android:name="org.d3if4054.hitungbmi.ui.histori.HistoriFragment"
+        android:label="@string/histori"
+        tools:layout="@layout/fragment_histori" />
 
 
 </navigation>
